@@ -5,7 +5,7 @@
 <p><img src="./chapter_picture_19.jpg"/></p>
 
 ## Overview
-I began learning about computer programming early this year - March/April 2022, so I read ***Eloquent Javascript*** Written by *[Marijn Haverbeke](http://marijnhaverbeke.nl)* on advise of a friend and mentor. After completing the book I went on to study on the React framework and Redux Library.
+I began learning about computer programming early this year - March/April 2022, so I read ***Eloquent Javascript*** Written by *[Marijn Haverbeke](https://github.com/marijnh)* on advise of a friend and mentor. After completing the book I went on to study on the React framework and Redux Library.
 
 So I decided to recreate the one of my favourite projects from the book Eloquent Javascript with the other new technologies I have learned also enhanced it with a full UI hence **PRO**.
 
