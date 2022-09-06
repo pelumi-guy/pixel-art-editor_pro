@@ -1,0 +1,77 @@
+@import "properties.scss";
+
+.palette {
+    border-radius: 0.5rem;
+    text-align: center;
+    height: 200px;
+}
+
+.tool {
+    font-size: 2rem;
+    padding: 1rem 1.5rem 1rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease-in-out;
+    z-index: 2;
+    &:hover {
+        cursor: pointer;
+        background-color: dimgray;
+        color: $white;
+    }
+    &:focus {
+        background-color: dimgray;
+        color: $white;
+    }
+}
+
+.footer {
+    font-size: 2rem;
+    padding-top: 1px;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus {
+              background: goldenrod;
+              color: $white;
+              box-shadow: 10px;
+            }
+
+    // .save {
+    //     color: $white;
+    //     &:hover {
+    //       background: darkorange;
+    //       box-shadow: 10px;
+    //     }
+    //     &:focus {
+    //       background: goldenrod;
+    //       color: $white;
+    //       box-shadow: 0px;
+    //     }
+    //   }
+    
+    //   .load {
+    //     color: $white;
+    //     &:hover {
+    //       background: darkseagreen;
+    //       box-shadow: 10px;
+    //     }
+    //     &:focus {
+    //       background: lightseagreen;
+    //       color: $white;
+    //       box-shadow: 0px;
+    //     }
+    //   }
+}
+
+.toolIcon {
+    pointer-events: none;
+    z-index: 1;
+}

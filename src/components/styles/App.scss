@@ -1,0 +1,153 @@
+@import "properties.scss";
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  background: $white;
+  color: $black;
+  justify-content: center;
+  align-items: center;
+  font-family: "Play", sans-serif;
+  text-align: center;
+  min-width: fit-content;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  min-width: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.leftPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // margin-left: 10%;
+  margin-right: 10px;
+}
+
+.midPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.rightPanel {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+
+  .colorPicker {
+    transform: rotate(90deg);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+}
+
+.canvas {
+  box-shadow: 1px 2px 3px 4px rgba(20,20,20,0.4);
+  &:hover {
+    cursor: crosshair;
+  }
+}
+
+.pointer-hover {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.banner {
+  // position: absolute;
+  margin-top: 0%;
+  padding: 10px;
+  background: coral;
+  color: $white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.footer {
+  margin-top: 10px;
+    
+}
+
+
+div[disabled] 
+{
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+#options {
+  display: flex;
+  margin-bottom: 3rem;
+  justify-content: center;
+
+  .option {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panelInput {
+    height: 5rem;
+    width: 5rem;
+    font-size: 2rem;
+    text-align: center;
+    background-color: $black;
+    color: $white;
+    border: 1px solid $grey;
+    border-radius: 0.25rem;
+    margin: 0 1rem 0.5rem 1rem;
+    padding-left: 1rem;
+
+    &:focus {
+      outline: none !important;
+      border-color: $red;
+      box-shadow: 0 0 0.5rem $grey;
+    }
+  }
+}
+
+.button {
+  font-size: 1.25rem;
+  background-color: coral;
+  color: $white;
+  padding: 1rem 3rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease-in-out;
+  margin-bottom: 2rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border-color: $red;
+    color: $black;
+  }
+}
