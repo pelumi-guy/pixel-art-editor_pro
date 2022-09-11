@@ -43,7 +43,7 @@ function App() {
       <h1 className='banner show-margin'>PIXEL ART EDITOR - PRO</h1>
 
       <div className="App">
-        <div className='leftPanel' disabled={hideDrawingPanel}><ToolPanel /></div> 
+        <div className='leftPanel' disabled={hideDrawingPanel}><ToolPanel hideOptions={hideOptions}/></div> 
         
         <div className='midPanel'>
             <InitOptions hideDrawingPanel={hideDrawingPanel} init={init} setInit={setInit}/>
