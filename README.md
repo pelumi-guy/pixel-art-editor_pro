@@ -1,5 +1,5 @@
 # Pixel-Art-Editor-Pro
->I look at the many colors before me. I look at my blank canvas. Then, I try to apply colors like words that shape poems, like notes that shape music.
+>I look at the many colors before me. I look at my blank canvas. Then, I try to apply colors like words that shape poems, like notes that shape music.  
 >    -Joan Miro
 
 <p><img src="./chapter_picture_19.jpg"/></p>
