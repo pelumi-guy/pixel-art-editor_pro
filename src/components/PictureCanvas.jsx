@@ -60,6 +60,12 @@ const PictureCanvas = ({ getCanvas }) => {
         dispatch({ type: 'draw/startDrawing' });
         setPosition(pointerPosition(e, canvasRef.current));
     }
+
+    const onTouchStart = (e) => {
+      e.preventDefault();
+      dispatch({ type: 'draw/startDrawing' });
+      setPosition(pointerPosition(e.touches[0], canvasRef.current));
+    }
     
       const onMouseMove = (e, lastPosition, tool) => {
         if (e.button === 0 && e.buttons === 1) {
@@ -69,6 +75,14 @@ const PictureCanvas = ({ getCanvas }) => {
             dispatch({ type: `draw/${tool}`, payload: { pos: {x: pos.x, y: pos.y}, lastPosition: {x: lastPosition.x, y: lastPosition.y}, color: color}})
           }
         }
+      }
+
+      const onTouchMove = (e, lastPosition, tool) => {
+        const pos = pointerPosition(e.touches[0], canvasRef.current);
+        if (tool !== 'fill')
+          {
+            dispatch({ type: `draw/${tool}`, payload: { pos: {x: pos.x, y: pos.y}, lastPosition: {x: lastPosition.x, y: lastPosition.y}, color: color}})
+          }   
       }
 
     const fillClick = (tool, color) => {
@@ -84,8 +98,8 @@ const PictureCanvas = ({ getCanvas }) => {
         height={height * scale}
         onMouseMove={(e) => onMouseMove(e, lastPosition, tool)}
         onMouseDown={(e) => {onMouseDown(e)}}
-        onTouchStart={(e) => {onMouseDown(e)}}
-        onTouchMove={(e) => onMouseMove(e, lastPosition, tool)}
+        onTouchStart={(e) => {onTouchStart(e)}}
+        onTouchMove={(e) => onTouchMove(e, lastPosition, tool)}
         onClick={() => fillClick(tool, color)}
         ref={canvasRef}
         className="canvas"

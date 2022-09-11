@@ -15,10 +15,10 @@ const ToolPanel = ({hideOptions}) => {
     const canRedo = useSelector(canRedoSelector)
     const drawButton = useRef(null);
     const [prevButton, setPrevButton] = useState();
-    const [firstTIme, setFirstTime] = useState(true);
+    const [clickedDraw, setClickedDraw] = useState(true);
      
     useEffect(() => {
-        if (firstTIme === true && hideOptions === true)
+        if (clickedDraw === true && hideOptions === true)
         {
             if (drawButton.current) {
                 drawButton.current.style.backgroundColor = "dimgray";
@@ -32,7 +32,9 @@ const ToolPanel = ({hideOptions}) => {
 
 
     const clickHandler = (e) => {
-        setFirstTime(false);
+        if (e.target.id !== "draw") setClickedDraw(false);
+        else setClickedDraw(true);
+
         if (prevButton !== undefined) {
             prevButton.style.backgroundColor = null;
             prevButton.style.color = null; }
@@ -55,7 +57,6 @@ const ToolPanel = ({hideOptions}) => {
             <thead>
                 <tr>
                     <td><button className="tool" id='draw' ref={drawButton}
-                        // onClick={() => dispatch({type: 'tool/toolChanged', payload: "draw"})}
                         onClick={(e) => clickHandler(e)}
                     ><i className="bi bi-pencil-fill toolIcon"></i></button></td>
                     <td><button className="tool" id='fill'

@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div>
-      <h1 className='banner show-margin'>PIXEL ART EDITOR - PRO</h1>
+      <h1 className='banner display-1'><b>PIXEL ART EDITOR - PRO</b></h1>
 
       <div className="App">
         <div className='leftPanel' disabled={hideDrawingPanel}><ToolPanel hideOptions={hideOptions}/></div> 

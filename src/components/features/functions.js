@@ -210,11 +210,11 @@ const pictureFromImage = (image, width, height) => {
   let canvas = document.createElement("canvas");;
   canvas.width = width;
   canvas.height = height;
-  var hRatio = canvas.width  / image.width;
-  var vRatio =  canvas.height / image.height;
-  var ratio  = Math.max ( hRatio, vRatio );
-  var centerShift_x = ( canvas.width - image.width * ratio ) / 2;
-  var centerShift_y = ( canvas.height - image.height * ratio ) / 2; 
+  let hRatio = canvas.width  / image.width;
+  let vRatio =  canvas.height / image.height;
+  let ratio  = Math.max ( hRatio, vRatio );
+  let centerShift_x = ( canvas.width - image.width * ratio ) / 2;
+  let centerShift_y = ( canvas.height - image.height * ratio ) / 2; 
   let cx = canvas.getContext("2d");
   cx.clearRect(0,0,canvas.width, canvas.height);
   cx.drawImage(image, 0, 0, image.width, image.height,

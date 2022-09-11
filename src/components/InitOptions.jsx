@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react'
-import { useState, useMemo } from 'react';
+import React from 'react'
 
 const InitOptions = ({hideDrawingPanel, init, setInit}) => {
   
     return (
     <div>
-        {hideDrawingPanel && <h2>Enter Panel Dimensions</h2>}
+        {hideDrawingPanel && <h2>Enter Panel Dimensions <br /> (pixels)</h2>}
         {hideDrawingPanel && (
         <div id="options">
           <div className="option">
