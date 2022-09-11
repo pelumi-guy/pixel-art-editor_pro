@@ -78,6 +78,7 @@ const PictureCanvas = ({ getCanvas }) => {
       }
 
       const onTouchMove = (e, lastPosition, tool) => {
+        e.preventDefault();
         const pos = pointerPosition(e.touches[0], canvasRef.current);
         if (tool !== 'fill')
           {
