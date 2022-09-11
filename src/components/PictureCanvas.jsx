@@ -84,6 +84,8 @@ const PictureCanvas = ({ getCanvas }) => {
         height={height * scale}
         onMouseMove={(e) => onMouseMove(e, lastPosition, tool)}
         onMouseDown={(e) => {onMouseDown(e)}}
+        onTouchStart={(e) => {onMouseDown(e)}}
+        onTouchMove={(e) => onMouseMove(e, lastPosition, tool)}
         onClick={() => fillClick(tool, color)}
         ref={canvasRef}
         className="canvas"
