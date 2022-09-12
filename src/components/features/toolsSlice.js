@@ -15,7 +15,6 @@ const toolsSlice = createSlice({
            },
         colorChanged(state, action) {
             state.color = action.payload
-            console.log("color changed to: ", action.payload)
         }
     }
 })
