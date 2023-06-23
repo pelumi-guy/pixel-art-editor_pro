@@ -4,6 +4,7 @@ import { pointerPosition, hexToRgb } from './features/functions';
 import { useSelector, useDispatch } from 'react-redux';
 import { createSelector } from '@reduxjs/toolkit';
 import "./styles/App.scss"
+import { fill } from './features/pictureSlice';
 
 
 const PictureCanvas = ({ getCanvas }) => {
@@ -54,7 +55,7 @@ const PictureCanvas = ({ getCanvas }) => {
         let res = ((y * width * scale) + x) + ((scaleY * width * scale) + scaleX);
         return res;
       }
-      
+
 
     const onMouseDown = (e) => {
         dispatch({ type: 'draw/startDrawing' });
@@ -66,7 +67,7 @@ const PictureCanvas = ({ getCanvas }) => {
       dispatch({ type: 'draw/startDrawing' });
       setPosition(pointerPosition(e.touches[0], canvasRef.current));
     }
-    
+
       const onMouseMove = (e, lastPosition, tool) => {
         if (e.button === 0 && e.buttons === 1) {
           const pos = pointerPosition(e, canvasRef.current)
@@ -83,18 +84,19 @@ const PictureCanvas = ({ getCanvas }) => {
         if (tool !== 'fill')
           {
             dispatch({ type: `draw/${tool}`, payload: { pos: {x: pos.x, y: pos.y}, lastPosition: {x: lastPosition.x, y: lastPosition.y}, color: color}})
-          }   
+          }
       }
 
     const fillClick = (tool, color) => {
       if (tool === 'fill')
-        dispatch({ type: 'draw/fill', payload: {color: color} });
+        dispatch({ type: fill, payload: {color: color} });
+        // console.log(`fill action: ${fill}`)
     }
-            
-    
+
+
   return (
     <div>
-        <canvas 
+        <canvas
         width={width * scale}
         height={height * scale}
         onMouseMove={(e) => onMouseMove(e, lastPosition, tool)}
@@ -106,7 +108,7 @@ const PictureCanvas = ({ getCanvas }) => {
         className="canvas"
         />
     </div>
-    
+
   )
 }
 

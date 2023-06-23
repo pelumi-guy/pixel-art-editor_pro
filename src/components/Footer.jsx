@@ -19,14 +19,20 @@ const Footer = ({canvas, width, height }) => {
   }
 
   return (
-      <div className='show-margin footer'>  
+      <div className='show-margin footer'>
             <button type="button" className="button"
               onClick={() => {download(canvas)}}
-            ><i className="bi bi-download"></i></button> <span></span>
+            >
+              <i className="bi bi-download"></i> &nbsp;
+              DOWNLOAD
+            </button> &nbsp;
             <button type="button" className="button"
               onClick={() => {loadImage(dispatch, width, height)}}
               onBlur={() => {dispatch({ type: 'draw/resetScale' })}}
-            ><i className="bi bi-upload"></i></button>
+            >
+              <i className="bi bi-upload"></i> &nbsp;
+              UPLOAD
+              </button>
           </div>
   )
 }
