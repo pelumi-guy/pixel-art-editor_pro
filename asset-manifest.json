@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/pixel-art-editor_pro/static/css/main.e8edb9af.css",
-    "main.js": "/pixel-art-editor_pro/static/js/main.943bd937.js",
+    "main.js": "/pixel-art-editor_pro/static/js/main.4ed386b7.js",
     "static/js/787.c9d6bbb9.chunk.js": "/pixel-art-editor_pro/static/js/787.c9d6bbb9.chunk.js",
     "static/media/bootstrap-icons.woff?": "/pixel-art-editor_pro/static/media/bootstrap-icons.e559bf06bc84fd9525e6.woff",
     "static/media/bootstrap-icons.woff2?": "/pixel-art-editor_pro/static/media/bootstrap-icons.ea98e12d2d58747f9fc5.woff2",
     "index.html": "/pixel-art-editor_pro/index.html",
     "main.e8edb9af.css.map": "/pixel-art-editor_pro/static/css/main.e8edb9af.css.map",
-    "main.943bd937.js.map": "/pixel-art-editor_pro/static/js/main.943bd937.js.map",
+    "main.4ed386b7.js.map": "/pixel-art-editor_pro/static/js/main.4ed386b7.js.map",
     "787.c9d6bbb9.chunk.js.map": "/pixel-art-editor_pro/static/js/787.c9d6bbb9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e8edb9af.css",
-    "static/js/main.943bd937.js"
+    "static/js/main.4ed386b7.js"
   ]
 }
