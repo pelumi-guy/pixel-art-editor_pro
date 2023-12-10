@@ -5,9 +5,12 @@
 <p><img src="./chapter_picture_19.jpg"/></p>
 
 ## Overview
-I began learning about computer programming early this year - March/April 2022, so I read ***Eloquent Javascript*** Written by *[Marijn Haverbeke](https://github.com/marijnh)* on advise of a friend and mentor. After completing the book I went on to study on the React framework and Redux Library.
 
-So I decided to recreate the one of my favourite projects from the book Eloquent Javascript with the other new technologies I have learned also enhanced it with a full UI hence **PRO**.
+This project involves the development of a user-friendly web application centered around the creation and modification of pixel art. This platform serves as an innovative tool allowing users to generate, edit, and manipulate pixel-based digital art. Not only does it offer a robust editing interface for crafting pixel art from scratch, but it also includes a unique feature enabling users to upload existing images to convert them into pixel art. This functionality allows for versatile creativity and customization, empowering users to transform their photos or images into pixelated renditions. Furthermore, once the pixel art is finalized, the application enables easy downloading of the finished artwork in various file formats, ensuring convenient access and use of the completed pixel art pieces.
+
+I embarked on my programming journey in early 2022, diving into ***Eloquent JavaScript*** by *[Marijn Haverbeke](https://github.com/marijnh)*, recommended by a friend and mentor. Upon completing the book, I delved into studying the React framework and Redux Library.
+
+Motivated by these learnings, I decided to reimagine one of my favorite projects from Eloquent JavaScript, leveraging the new technologies I acquired and enhancing it with a complete user interface, hence the suffix **PRO**.
 
 ## Original App Interface from Eloquent Javascript
 <p><img src="./pixel_editor.png"/></p>
